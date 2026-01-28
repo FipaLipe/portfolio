@@ -43,10 +43,10 @@ const Interests = () => {
         </div>
         <div className="box" style={{ gridArea: "f" }}>
           <img src="matematica.png" alt="matematica" />
-          <h3>Linguagens</h3>
+          <h3>Matemática</h3>
           <p>
-            Gosto de conhecer novos idiomas e culturas e sonho em viajar o mundo
-            algum dia
+            Gosto da matemática como forma de pensar. Não como lista de
+            fórmulas, mas como linguagem para estruturar problemas
           </p>
         </div>
         <div className="box" style={{ gridArea: "g" }}>
