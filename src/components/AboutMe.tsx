@@ -38,29 +38,31 @@ const AboutMe = () => {
   return (
     <div
       id="about"
-      className="min-h-125 w-full bg-black text-yellow-50 flex p-10 flex-row gap-2 items-center justify-center relative"
+      className="min-h-125 w-full bg-black text-yellow-50 flex p-10 flex-col lg:flex-row gap-2 items-center justify-center relative"
     >
       <img
         src="/brain.png"
         alt="cérebro"
-        className="w-120 h-fit animate-[float-light_3000ms_ease-in-out_infinite] "
+        className="w-120 h-fit animate-[float-light_3000ms_ease-in-out_infinite] -my-12 lg:my-0 "
       />
 
       <div className="flex flex-col gap-3 h-full">
-        <h1 className="text-8xl font-black text-amber-500">OLÁ!!</h1>
+        <h1 className="text-6xl lg:text-8xl font-black text-amber-500">
+          OLÁ!!
+        </h1>
 
-        <p className="text-lg font-light leading-[100%] ml-12">
+        <p className="text-sm lg:text-lg font-light leading-[100%] ml-8 lg:ml-12">
           Prazer! Eu sou o Filipi
         </p>
 
-        <p className="text-lg font-light leading-[120%] ml-24 w-80">
+        <p className="text-sm lg:text-lg font-light leading-[120%] ml-16 lg:ml-24 w-60 lg:w-80">
           <span className="font-['Jacquard_12'] text-2xl leading-[100%]">
             Sempre
           </span>{" "}
           fui curioso e interessado em entender como as coisas funcionam.
         </p>
 
-        <p className="text-lg font-light leading-[120%] ml-36 w-80">
+        <p className="text-sm lg:text-lg font-light leading-[120%] ml-24 lg:ml-36 w-60 lg:w-80">
           <span className="font-['Jacquard_12'] text-2xl leading-[100%]">
             Hoje
           </span>{" "}
@@ -70,7 +72,10 @@ const AboutMe = () => {
       </div>
 
       {/* ÍCONES FLUTUANTES */}
-      <div id="icons" className="absolute w-full max-w-300 h-full z-20">
+      <div
+        id="icons"
+        className="hidden lg:block absolute w-full max-w-300 h-full z-20"
+      >
         <span className="absolute top-105 left-50 -rotate-15 scale-[1]">
           <Icon />
         </span>

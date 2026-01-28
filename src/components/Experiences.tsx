@@ -23,7 +23,7 @@ const Experience = ({
   //   addActiveImage,
   //   resetActiveImages,
 }: ExperienceProps) => {
-  const [hovered, setHovered] = useState(false);
+  const [open, setOpen] = useState(false);
   //   const [imageIndex, setImageIndex] = useState(0);
 
   //   const handleMouseMove = (
@@ -51,16 +51,16 @@ const Experience = ({
 
   return (
     <li
-      className="w-full border border-amber-500 p-3 pl-4 bg-transparent overflow-hidden h-full max-h-16 hover:max-h-120 transition-[max-height,background-color,color] duration-300 ease-in-out relative"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => {
-        setHovered(false);
-        // resetActiveImages();
-      }}
+      className={` w-full border border-amber-500 p-3 pl-4 bg-transparent overflow-hidden h-full  transition-[max-height,background-color,color] duration-300 ease-in-out relative z-20
+        ${open ? "max-h-240 lg:max-h-120" : "max-h-12 lg:max-h-16"}
+`}
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onClick={() => setOpen((p) => !p)}
       //   onMouseMove={handleMouseMove}
     >
       <h2
-        className="text-2xl text-amber-500
+        className="text-md lg:text-2xl text-amber-500
     font-['Anonymous_pro']
     uppercase"
       >
@@ -71,22 +71,22 @@ const Experience = ({
         className={`
       block
       mt-2
-      text-md w-10/12 text-justify text-amber-500
+      text-md w-full md:w-10/12 text-justify text-amber-500
       transition-opacity
       duration-200
-      ${hovered ? "opacity-100" : "opacity-0"}
+      ${open ? "opacity-100" : "opacity-0"}
     `}
       >
         {description}
       </p>
 
-      <div className="flex flex-row gap-4 mt-2">
+      <div className="flex flex-col md:flex-row gap-4 mt-2">
         {images.map((img, i) => (
           <img
             src={img}
             alt={img}
             key={i}
-            className="img-fluid w-5/12 h-fit rounded-xl -hover:translate-y-5 hover:scale-102 hover:shadow-md transition-all duration-200 ease-in"
+            className="img-fluid w-full md:w-5/12 h-fit rounded-xl -hover:translate-y-5 hover:scale-102 hover:shadow-md transition-all duration-200 ease-in"
           />
         ))}
       </div>
@@ -102,8 +102,8 @@ const Experiences = () => {
   //   };
 
   return (
-    <div className="min-h-150 max-w-300 w-full mx-auto p-20 flex flex-col justify-center items-start">
-      <h1 className="text-8xl font-black text-amber-500 text-start m-0">
+    <div className="min-h-120 lg:min-h-150 max-w-300 w-full mx-auto p-10 md:p-20 flex flex-col justify-center items-start">
+      <h1 className="text-4xl md:text-8xl font-black text-amber-500 text-start m-0">
         EXPERIÊNCIAS
       </h1>
       <ul className="w-full mt-10">

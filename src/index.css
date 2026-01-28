@@ -49,6 +49,29 @@ span.md-48 {
   overflow: hidden;
 }
 
+@media (width <= 50rem) {
+  #interests-grid {
+    aspect-ratio: auto;
+    height: auto;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "f"
+      "g"
+      "h";
+  }
+
+  .box[data-area="d"],
+  .box[data-area="e"] {
+    display: none;
+  }
+}
+
 .box {
   @apply border-2 border-amber-500 rounded-[36px] p-4 overflow-hidden flex flex-col;
 }

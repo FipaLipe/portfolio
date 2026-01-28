@@ -81,7 +81,7 @@ const Eyes = () => {
       ref={svgRef}
       viewBox="0 0 107 25"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute w-24 left-[calc(50%+5px)] top-[calc(235px)] -translate-x-1/2 -translate-y-1/2"
+      className="absolute w-9 lg:w-24 left-[calc(50%+2px)] lg:left-[calc(50%+5px)] top-30.5 lg:top-58.75 -translate-x-1/2 -translate-y-1/2"
     >
       {/* OLHO ESQUERDO */}
       <path

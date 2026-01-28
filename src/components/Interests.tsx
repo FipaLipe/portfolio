@@ -1,6 +1,6 @@
 const Interests = () => {
   return (
-    <div className="min-h-150 h-full max-w-300 w-full mx-auto p-20 flex flex-col justify-center items-center">
+    <div className="min-h-150 h-full max-w-300 w-full mx-auto p-10 lg:p-20 flex flex-col justify-center items-center">
       <div id="interests-grid">
         <div className="box" style={{ gridArea: "a" }}>
           <img src="linguagens.png" alt="linguages" />
@@ -31,14 +31,14 @@ const Interests = () => {
             interessa
           </p>
         </div>
-        <div className="box" style={{ gridArea: "d" }}>
+        <div className="box" data-area="d" style={{ gridArea: "d" }}>
           <img
             src="cerebro.png"
             className="aspect-square w-full h-full"
             alt="cerebro"
           />
         </div>
-        <div className="box p-1! overflow-hidden" style={{ gridArea: "e" }}>
+        <div className="box p-1!" data-area="e" style={{ gridArea: "e" }}>
           <img src="homem.png" alt="homem" className="rounded-[34px] h-full" />
         </div>
         <div className="box" style={{ gridArea: "f" }}>
