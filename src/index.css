@@ -69,7 +69,11 @@ span.md-48 {
 }
 
 .box {
-  @apply border-2 border-amber-500 rounded-[36px] p-4 overflow-hidden flex flex-col;
+  @apply border-2 border-amber-500 rounded-[36px] p-4 overflow-hidden flex flex-col transition-all ease-in;
+}
+
+.box:hover {
+  @apply scale-98 shadow-lg;
 }
 
 .box img {
