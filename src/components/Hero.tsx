@@ -36,12 +36,13 @@ const Hero = () => {
         id="filipi-div"
         className="absolute flex top-0 left-0 w-full h-275 z-10 "
       >
-        <img
-          id="filipi"
-          className="mx-auto mt-20 lg:mt-30 img-fluid h-fit w-90 lg:w-240 max-w-6xl"
-          src="/filipi.png"
-        ></img>
-        <Eyes />
+        <div id="filipi" className="mx-auto">
+          <img
+            className="mx-auto mt-20 lg:mt-30 img-fluid h-fit w-90 lg:w-240 max-w-6xl"
+            src="/filipi.png"
+          ></img>
+          <Eyes />
+        </div>
       </div>
     </div>
   );

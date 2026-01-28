@@ -52,7 +52,7 @@ const Experience = ({
   return (
     <li
       className={` w-full border border-amber-500 p-3 pl-4 bg-transparent overflow-hidden h-full  transition-[max-height,background-color,color] duration-300 ease-in-out relative z-20
-        ${open ? "max-h-240 lg:max-h-120" : "max-h-12 lg:max-h-16"}
+        ${open ? "max-h-240 md:max-h-120" : "max-h-12 md:max-h-16"}
 `}
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
@@ -60,7 +60,7 @@ const Experience = ({
       //   onMouseMove={handleMouseMove}
     >
       <h2
-        className="text-md lg:text-2xl text-amber-500
+        className="text-md md:text-2xl text-amber-500
     font-['Anonymous_pro']
     uppercase"
       >
@@ -102,7 +102,7 @@ const Experiences = () => {
   //   };
 
   return (
-    <div className="min-h-120 lg:min-h-150 max-w-300 w-full mx-auto p-10 md:p-20 flex flex-col justify-center items-start">
+    <div className="min-h-120 md:min-h-150 max-w-300 w-full mx-auto p-10 md:p-20 flex flex-col justify-center items-start">
       <h1 className="text-4xl md:text-8xl font-black text-amber-500 text-start m-0">
         EXPERIÊNCIAS
       </h1>
